@@ -24,7 +24,11 @@ public class CoinService {
         return coinGeckoClient.getTopCoins("usd", "market_cap_desc", limit, 1);
     }
 
-    public Map<String, Object> getCryptoPrice(String crypto, String currency) {
-        return coinGeckoClient.getCryptoPrice(crypto, currency);
+    public Map<String, Object> getCoinPrice(String coin, String currency) {
+        return coinGeckoClient.getCoinPrice(coin, currency);
+    }
+
+    public List<Map<String, Object>> getCoins(String currency, String order, int perPage, int page) {
+        return coinGeckoClient.getTopCoins(currency, order, perPage, page);
     }
 }

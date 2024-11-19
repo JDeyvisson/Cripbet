@@ -19,7 +19,7 @@ public interface CoinGeckoClient {
 
 
     @GetMapping("/simple/price")
-        Map<String, Object> getCryptoPrice(
+        Map<String, Object> getCoinPrice(
         @RequestParam("ids") String ids,
         @RequestParam("vs_currencies") String vsCurrencies);
     
